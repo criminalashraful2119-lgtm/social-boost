@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Social Boost</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#17202a}header{background:#08766d;color:#fff;padding:28px 18px}header h1{margin:0;font-size:30px}header p{margin:7px 0 0;opacity:.9}.container{max-width:850px;margin:auto;padding:18px}.notice{background:#fff;border-radius:22px;padding:22px;margin:8px 0 20px;text-align:center;box-shadow:0 6px 24px #0001}.notice h2{margin:0 0 10px;color:#075e54;font-size:27px}.notice p{margin:0;color:#59636d;font-size:17px}.tabs{display:flex;gap:8px;overflow:auto;margin-bottom:18px}.tab{border:0;border-radius:12px;padding:12px 18px;background:#fff;font-weight:bold;cursor:pointer;white-space:nowrap}.tab.active{background:#128c7e;color:#fff}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:#fff;border-radius:18px;padding:17px;box-shadow:0 4px 18px #0001;border:1px solid #edf0f2}.card h3{font-size:22px;margin:0 0 8px}.item{font-size:15px;color:#65717c;margin-bottom:12px;min-height:38px}.price{font-size:25px;font-weight:bold;color:#128c7e;margin:10px 0}.order{width:100%;border:0;border-radius:11px;padding:14px;background:#128c7e;color:#fff;font-size:17px;font-weight:bold;cursor:pointer;text-transform:uppercase;letter-spacing:.4px}footer{text-align:center;padding:24px;color:#68737c;font-size:14px}@media(max-width:430px){.container{padding:14px}.grid{gap:9px}.card{padding:13px}.card h3{font-size:19px}.price{font-size:22px}}
+</style></head>
+<body>
+<header><h1>🚀 Social Boost</h1><p>Facebook • Instagram • TikTok Services</p></header>
+<div class="container">
+<div class="notice"><h2>আপনার পছন্দের প্যাকেজ</h2><p>পছন্দ করুন এবং সরাসরি WhatsApp-এ অর্ডার করুন।</p></div>
+<div class="tabs"><button class="tab active" onclick="showTab('facebook',this)">Facebook</button><button class="tab" onclick="showTab('instagram',this)">Instagram</button><button class="tab" onclick="showTab('tiktok',this)">TikTok</button></div>
+<div id="facebook" class="section active"><div class="grid">
+<div class="card"><h3>500 Followers</h3><div class="item">Facebook Page/Profile Followers</div><div class="price">৳ 250</div><button class="order" onclick="order('Facebook','500 Followers','৳ 250')">Order Now</button></div>
+<div class="card"><h3>1K Followers</h3><div class="item">Facebook Page/Profile Followers</div><div class="price">৳ 450</div><button class="order" onclick="order('Facebook','1K Followers','৳ 450')">Order Now</button></div>
+<div class="card"><h3>1K Likes</h3><div class="item">Facebook Post/Page Likes</div><div class="price">৳ 300</div><button class="order" onclick="order('Facebook','1K Likes','৳ 300')">Order Now</button></div>
+<div class="card"><h3>10K Views</h3><div class="item">Facebook Video Views</div><div class="price">৳ 200</div><button class="order" onclick="order('Facebook','10K Views','৳ 200')">Order Now</button></div>
+</div></div>
+<div id="instagram" class="section"><div class="grid">
+<div class="card"><h3>500 Followers</h3><div class="item">Instagram Followers</div><div class="price">৳ 300</div><button class="order" onclick="order('Instagram','500 Followers','৳ 300')">Order Now</button></div>
+<div class="card"><h3>1K Followers</h3><div class="item">Instagram Followers</div><div class="price">৳ 550</div><button class="order" onclick="order('Instagram','1K Followers','৳ 550')">Order Now</button></div>
+<div class="card"><h3>1K Likes</h3><div class="item">Instagram Post Likes</div><div class="price">৳ 250</div><button class="order" onclick="order('Instagram','1K Likes','৳ 250')">Order Now</button></div>
+<div class="card"><h3>10K Views</h3><div class="item">Instagram Reel Views</div><div class="price">৳ 180</div><button class="order" onclick="order('Instagram','10K Views','৳ 180')">Order Now</button></div>
+</div></div>
+<div id="tiktok" class="section"><div class="grid">
+<div class="card"><h3>500 Followers</h3><div class="item">TikTok Followers</div><div class="price">৳ 280</div><button class="order" onclick="order('TikTok','500 Followers','৳ 280')">Order Now</button></div>
+<div class="card"><h3>1K Followers</h3><div class="item">TikTok Followers</div><div class="price">৳ 500</div><button class="order" onclick="order('TikTok','1K Followers','৳ 500')">Order Now</button></div>
+<div class="card"><h3>1K Likes</h3><div class="item">TikTok Video Likes</div><div class="price">৳ 220</div><button class="order" onclick="order('TikTok','1K Likes','৳ 220')">Order Now</button></div>
+<div class="card"><h3>10K Views</h3><div class="item">TikTok Video Views</div><div class="price">৳ 150</div><button class="order" onclick="order('TikTok','10K Views','৳ 150')">Order Now</button></div>
+</div></div>
+</div><footer>© 2026 Social Boost</footer>
+<script>
+const WHATSAPP_NUMBER="8801941315204";
+function showTab(id,b){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');b.classList.add('active')}
+function order(platform,pack,price){if(WHATSAPP_NUMBER.includes('X')){alert('আগে নিজের WhatsApp নম্বর সেট করুন।');return}const msg=`Hello! আমি অর্ডার করতে চাই.%0APlatform: ${platform}%0APackage: ${pack}%0APrice: ${price}%0A আমার Link/Username: `;window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank')}
+</script></body></html>
